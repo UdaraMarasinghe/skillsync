@@ -1,0 +1,303 @@
+/* ==========================================================================
+   SKILLSYNC SYSTEM ADMIN CONTROL PANEL STYLESHEET
+   Brand Colors: 60% #004743, 30% #ffffff, 10% #ACFF78
+   Border Radius Rules: 4px, 8px, 12px strictly
+   ========================================================================== */
+
+:root {
+  --brand-dark: #004743;
+  --brand-dark-hover: #003633;
+  --brand-light: #ffffff;
+  --brand-accent: #ACFF78;
+  --brand-accent-hover: #96ea60;
+  --bg-page: #f8faf9;
+  --bg-card: #ffffff;
+  --border-brand: #004743;
+  --border-light: #e2e8f0;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* Admin Tab Navigation Bar */
+.admin-tabs-wrapper {
+  background-color: #ffffff;
+  border: 2px solid var(--brand-dark);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.admin-tabs-wrapper .nav-link {
+  color: var(--brand-dark) !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 10px 18px !important;
+  transition: all 0.25s ease-in-out !important;
+  background-color: transparent;
+  border: none !important;
+  font-size: 0.9rem;
+}
+
+.admin-tabs-wrapper .nav-link:hover {
+  color: var(--brand-dark) !important;
+  background-color: rgba(0, 71, 67, 0.08) !important;
+}
+
+.admin-tabs-wrapper .nav-link.active {
+  background-color: var(--brand-dark) !important;
+  color: var(--brand-accent) !important;
+  box-shadow: 0 4px 14px rgba(0, 71, 67, 0.25) !important;
+}
+
+/* Dashboard Metric Cards */
+.admin-metric-card {
+  background: #ffffff;
+  border: 2px solid var(--brand-dark);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 71, 67, 0.15);
+}
+
+.admin-metric-card .icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--brand-dark);
+  color: var(--brand-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.admin-metric-card .metric-value {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--brand-dark);
+  line-height: 1.2;
+}
+
+.admin-metric-card .metric-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Standard Custom Cards */
+.admin-card {
+  background: #ffffff;
+  border: 2px solid var(--brand-dark);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 71, 67, 0.06);
+}
+
+/* Buttons */
+.btn-admin-primary {
+  background-color: var(--brand-dark);
+  color: var(--brand-accent) !important;
+  font-weight: 700;
+  border: 1.5px solid var(--brand-dark);
+  border-radius: 4px;
+  padding: 8px 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-admin-primary:hover {
+  background-color: var(--brand-dark-hover);
+  color: var(--brand-accent) !important;
+  box-shadow: 0 4px 12px rgba(0, 71, 67, 0.3);
+}
+
+.btn-admin-secondary {
+  background-color: #ffffff;
+  color: var(--brand-dark) !important;
+  font-weight: 700;
+  border: 1.5px solid var(--brand-dark);
+  border-radius: 4px;
+  padding: 8px 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-admin-secondary:hover {
+  background-color: rgba(0, 71, 67, 0.08);
+  color: var(--brand-dark) !important;
+}
+
+.btn-admin-accent {
+  background-color: var(--brand-accent);
+  color: var(--brand-dark) !important;
+  font-weight: 800;
+  border: 1.5px solid var(--brand-dark);
+  border-radius: 4px;
+  padding: 8px 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-admin-accent:hover {
+  background-color: var(--brand-accent-hover);
+  color: var(--brand-dark) !important;
+}
+
+/* Action Icon Buttons */
+.btn-action-suspend {
+  background-color: #ef4444;
+  color: #ffffff !important;
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-action-suspend:hover {
+  background-color: #dc2626;
+}
+
+.btn-action-activate {
+  background-color: #10b981;
+  color: #ffffff !important;
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-action-activate:hover {
+  background-color: #059669;
+}
+
+.btn-action-approve {
+  background-color: var(--brand-dark);
+  color: var(--brand-accent) !important;
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-action-approve:hover {
+  background-color: var(--brand-dark-hover);
+}
+
+/* Form Inputs */
+.admin-input {
+  border: 1.5px solid var(--brand-dark);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-input:focus {
+  border-color: var(--brand-dark);
+  box-shadow: 0 0 0 3px rgba(0, 71, 67, 0.15);
+  outline: none;
+}
+
+/* Table Styling */
+.table-admin {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid var(--brand-dark);
+}
+
+.table-admin th {
+  background-color: var(--brand-dark);
+  color: var(--brand-accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border: none;
+}
+
+.table-admin td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.table-admin tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badges */
+.badge-status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-active {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.badge-suspended {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+.badge-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
+.badge-approved {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #6366f1;
+}
+
+/* Modal Customization */
+.admin-modal .modal-content {
+  border-radius: 12px;
+  border: 2px solid var(--brand-dark);
+  overflow: hidden;
+}
+
+.admin-modal .modal-header {
+  background-color: var(--brand-dark);
+  color: var(--brand-accent);
+  border-bottom: none;
+  padding: 16px 24px;
+}
+
+.admin-modal .modal-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.admin-modal .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}

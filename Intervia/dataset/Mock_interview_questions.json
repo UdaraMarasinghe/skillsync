@@ -1,0 +1,112 @@
+{
+  "questions": [
+    {
+      "field": "Software Engineering",
+      "tier": "entry",
+      "question": "What is the difference between an Abstract Class and an Interface in Object-Oriented Programming?",
+      "answer": "An abstract class can have both abstract methods and concrete methods with implementations, as well as state or instance variables. An interface traditionally only defines method signatures and constants without implementation. A class can implement multiple interfaces but can only inherit from one abstract class."
+    },
+    {
+      "field": "Software Engineering",
+      "tier": "entry",
+      "question": "Explain the concept of Polymorphism with a brief example.",
+      "answer": "Polymorphism allows objects of different types to be treated as instances of a common superclass, enabling a single interface to represent different underlying forms or behaviors. Common types include compile-time method overloading and runtime method overriding."
+    },
+    {
+      "field": "Software Engineering",
+      "tier": "mid-level",
+      "question": "What is the purpose of Database Indexing and what are its trade-offs?",
+      "answer": "Database indexing creates a separate data structure like a B-Tree to significantly speed up search and retrieval operations. The trade-off is increased storage overhead and slower write operations because indices must be updated continuously."
+    },
+    {
+      "field": "Software Engineering",
+      "tier": "mid-level",
+      "question": "Explain the difference between Synchronous and Asynchronous programming.",
+      "answer": "Synchronous operations execute sequentially where each task blocks the execution thread until it completes. Asynchronous operations allow a program to initiate an operation and continue executing other tasks while waiting for background operations or I/O to finish."
+    },
+    {
+      "field": "Software Engineering",
+      "tier": "senior",
+      "question": "How do you design a scalable caching strategy for a high-traffic web application?",
+      "answer": "A scalable caching strategy uses multi-level caching including browser cache, CDN, application memory cache, and distributed caching systems like Redis or Memcached with cache-aside patterns, TTLs, and cache invalidation policies."
+    },
+    {
+      "field": "Software Engineering",
+      "tier": "senior",
+      "question": "Describe the CAP theorem and explain how you choose between consistency and availability in distributed systems.",
+      "answer": "The CAP theorem states that a distributed data store can simultaneously provide at most two of three guarantees: Consistency, Availability, and Partition tolerance. When network partitions occur, systems must choose between Consistency (CP) or Availability (AP)."
+    },
+    {
+      "field": "Web Development",
+      "tier": "entry",
+      "question": "What is the difference between localStorage, sessionStorage, and Cookies?",
+      "answer": "localStorage stores data with no expiration time across browser tabs. sessionStorage stores data only for the duration of the tab session. Cookies are smaller around 4KB, have customizable expiration dates, and are sent automatically with HTTP requests."
+    },
+    {
+      "field": "Web Development",
+      "tier": "mid-level",
+      "question": "What is Cross-Origin Resource Sharing (CORS) and how do you resolve CORS errors?",
+      "answer": "CORS is a browser security mechanism that restricts web pages from making HTTP requests to a different domain or port. It is resolved by configuring server headers like Access-Control-Allow-Origin and Access-Control-Allow-Methods."
+    },
+    {
+      "field": "Web Development",
+      "tier": "mid-level",
+      "question": "Explain the Virtual DOM in modern frontend frameworks and how it improves rendering performance.",
+      "answer": "The Virtual DOM is an in-memory representation of the real DOM. When state changes occur, a new virtual tree is diffed with the previous one, and only the minimal changed elements are batch-updated in the real DOM."
+    },
+    {
+      "field": "Web Development",
+      "tier": "senior",
+      "question": "How do you optimize Core Web Vitals (LCP, FID/INP, CLS) for a modern web application?",
+      "answer": "Optimizing LCP involves image compression, CDN caching, and SSR. Optimizing INP involves reducing main thread blocking JS and code splitting. Optimizing CLS involves reserving dimensions for images and media."
+    },
+    {
+      "field": "Data Science",
+      "tier": "entry",
+      "question": "What is the difference between Supervised and Unsupervised Learning?",
+      "answer": "Supervised learning trains models on labeled datasets where the input and target output are known. Unsupervised learning trains on unlabeled data to discover hidden patterns, groupings, or representations."
+    },
+    {
+      "field": "Data Science",
+      "tier": "mid-level",
+      "question": "What is Overfitting in machine learning and what techniques can prevent it?",
+      "answer": "Overfitting happens when a model learns training data and noise too closely, failing to generalize to new test data. Techniques to prevent it include cross-validation, regularization (L1/L2), pruning, dropout, and early stopping."
+    },
+    {
+      "field": "Data Science",
+      "tier": "senior",
+      "question": "Explain the Bias-Variance tradeoff and how ensemble methods address it.",
+      "answer": "Bias is error from underfitting or oversimplification, while variance is error from overfitting to fluctuations. Ensemble methods like Bagging reduce variance by averaging models, and Boosting reduces bias by learning from residuals."
+    },
+    {
+      "field": "DevOps & Cloud",
+      "tier": "entry",
+      "question": "What is the difference between a Virtual Machine and a Docker Container?",
+      "answer": "A Virtual Machine virtualizes hardware and runs a full guest operating system. A Docker container virtualizes at the OS level, sharing the host OS kernel and isolating only application processes and dependencies."
+    },
+    {
+      "field": "DevOps & Cloud",
+      "tier": "mid-level",
+      "question": "Explain the key stages and benefits of a CI/CD pipeline.",
+      "answer": "A CI/CD pipeline automates building, linting, running automated tests, and deploying to staging or production. It ensures code quality, shortens release cycles, and minimizes manual deployment errors."
+    },
+    {
+      "field": "DevOps & Cloud",
+      "tier": "senior",
+      "question": "How do you achieve Zero-Downtime deployment in Kubernetes or Cloud environments?",
+      "answer": "Zero-downtime deployment is achieved using Rolling Updates, Blue-Green deployments, or Canary releases with readiness and liveness probes and traffic shifting."
+    },
+    {
+      "field": "Cyber Security",
+      "tier": "entry",
+      "question": "What is SQL Injection and how can developers prevent it?",
+      "answer": "SQL Injection is a vulnerability where malicious SQL statements are inserted into inputs and executed by the database. It is prevented by using parameterized queries, prepared statements, input validation, and ORMs."
+    },
+    {
+      "field": "Cyber Security",
+      "tier": "mid-level",
+      "question": "Explain the difference between Symmetric and Asymmetric encryption.",
+      "answer": "Symmetric encryption uses the same single secret key for both encrypting and decrypting data. Asymmetric encryption uses a public and private key pair for secure key exchange and digital signatures."
+    }
+  ]
+}

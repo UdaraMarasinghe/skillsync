@@ -1,0 +1,685 @@
+/* SkillSync Custom Styles */
+
+:root {
+    --brand-dark: #004743;
+    --brand-light: #ffffff;
+    --brand-accent: #ACFF78;
+    --brand-accent-hover: #96ea60;
+    --brand-dark-soft: #003633;
+    --text-muted-custom: #6c757d;
+    
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8faf9;
+    color: #212529;
+    overflow-x: hidden;
+}
+
+/* Custom Utilities for Border Radius Constraints */
+.rounded-4px { border-radius: var(--radius-sm) !important; }
+.rounded-8px { border-radius: var(--radius-md) !important; }
+.rounded-12px { border-radius: var(--radius-lg) !important; }
+.btn-pill-100px { border-radius: 100px !important; padding-left: 2rem !important; padding-right: 2rem !important; }
+
+.brand-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Custom Buttons */
+.btn-accent {
+    background-color: var(--brand-accent);
+    color: var(--brand-dark);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.6rem 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover, .btn-accent:focus {
+    background-color: var(--brand-accent-hover);
+    color: var(--brand-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(172, 255, 120, 0.4);
+}
+
+.btn-brand {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.6rem 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.btn-brand:hover, .btn-brand:focus {
+    background-color: var(--brand-dark-soft);
+    color: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 71, 67, 0.3);
+}
+
+.btn-outline-accent {
+    border: 2px solid var(--brand-accent);
+    color: var(--brand-accent);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 0.55rem 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--brand-accent);
+    color: var(--brand-dark);
+}
+
+.btn-outline-brand {
+    border: 2px solid var(--brand-dark);
+    color: var(--brand-dark);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 0.55rem 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+}
+
+/* Navbar */
+.navbar-skillsync {
+    background-color: var(--brand-dark);
+    padding: 0.8rem 1.5rem;
+    border-bottom: 2px solid rgba(172, 255, 120, 0.2);
+}
+
+.navbar-brand-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--brand-light) !important;
+}
+
+.navbar-brand-text span {
+    color: var(--brand-accent);
+}
+
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    margin: 0 0.4rem;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.nav-link-custom:hover, .nav-link-custom.active {
+    color: var(--brand-accent) !important;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.header-icon-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--brand-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.header-icon-btn:hover {
+    background-color: rgba(172, 255, 120, 0.2);
+    color: var(--brand-accent);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: var(--brand-accent);
+    color: var(--brand-dark);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: var(--radius-sm);
+}
+
+/* Fullscreen Hero Slider */
+.hero-slider-section {
+    position: relative;
+    height: calc(100vh - 72px);
+    min-height: 580px;
+}
+
+.hero-slider-section .carousel,
+.hero-slider-section .carousel-inner,
+.hero-slider-section .carousel-item {
+    height: 100%;
+}
+
+.hero-slide-bg {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 71, 67, 0.92) 0%, rgba(0, 54, 51, 0.78) 60%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--brand-light);
+}
+
+.hero-badge {
+    background-color: rgba(172, 255, 120, 0.2);
+    color: var(--brand-accent);
+    border: 1px solid var(--brand-accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-bottom: 1.2rem;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.hero-desc {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+/* Hero CTA Button & Circle Icon Container */
+.hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 8px 8px 24px !important;
+    min-width: 230px;
+}
+
+.cta-icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #004743;
+    font-size: 1.35rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.btn:hover .cta-icon-circle {
+    transform: none;
+    background-color: #ffffff;
+    color: #004743;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-sm);
+    background-color: var(--brand-light);
+    opacity: 0.5;
+    margin: 0 6px;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--brand-accent);
+    width: 30px;
+}
+
+/* Cards & Components */
+.card-custom {
+    background: var(--brand-light);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--brand-dark);
+    box-shadow: 0 4px 20px rgba(0, 71, 67, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-custom:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 71, 67, 0.18);
+    border-color: var(--brand-accent);
+}
+    border-color: rgba(172, 255, 120, 0.8);
+}
+
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background-color: rgba(0, 71, 67, 0.08);
+    color: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Available Career Paths Carousel */
+.career-card {
+    height: 100%;
+}
+
+.career-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.career-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-custom:hover .career-img-wrapper img {
+    transform: scale(1.06);
+}
+
+.career-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--brand-dark);
+    color: var(--brand-accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+}
+
+/* Split View Section */
+.split-card {
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.split-card-build {
+    background: linear-gradient(145deg, var(--brand-dark) 0%, var(--brand-dark-soft) 100%);
+    color: var(--brand-light);
+}
+
+.split-card-generate {
+    background: var(--brand-light);
+    border: 2px solid var(--brand-dark);
+    color: var(--brand-dark);
+}
+
+.split-badge {
+    align-self: flex-start;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.split-card-build .split-badge {
+    background-color: var(--brand-accent);
+    color: var(--brand-dark);
+}
+
+.split-card-generate .split-badge {
+    background-color: var(--brand-dark);
+    color: var(--brand-accent);
+}
+
+/* Capitalize / Uppercase all Titles and CTA Buttons */
+h1, h2, h3, h4, h5, h6,
+.section-title, .hero-title,
+.btn, .nav-link-custom {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bottom Right Calendar Popup & FAB */
+.calendar-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background-color: var(--brand-accent);
+    color: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1052;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid var(--brand-dark);
+}
+
+.calendar-fab:hover {
+    transform: scale(1.08) rotate(4deg);
+    background-color: var(--brand-accent-hover);
+    box-shadow: 0 8px 25px rgba(0, 71, 67, 0.3);
+}
+
+/* Header Container 6rem Padding */
+.header-container-padding {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+}
+
+@media (max-width: 992px) {
+    .header-container-padding {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+/* Scroll to Top FAB (Positioned above Calendar FAB, z-index below Calendar Popup) */
+.scroll-top-fab {
+    position: fixed;
+    bottom: 92px;
+    right: 31px;
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    z-index: 1045;
+    transition: all 0.3s ease;
+    border: 2px solid var(--brand-dark);
+    text-decoration: none;
+}
+
+.scroll-top-fab:hover {
+    background-color: var(--brand-dark);
+    color: var(--brand-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 71, 67, 0.35);
+}
+
+.calendar-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 380px;
+    max-width: calc(100vw - 48px);
+    background-color: var(--brand-light);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 40px rgba(0, 47, 43, 0.25);
+    border: 2px solid var(--brand-dark);
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    animation: popupSlideIn 0.3s ease forwards;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.calendar-popup-header {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-popup-header h6 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--brand-accent);
+}
+
+.calendar-popup-body {
+    padding: 1.2rem;
+}
+
+/* Custom Mini Calendar Table */
+.mini-calendar {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.mini-calendar th {
+    font-size: 0.75rem;
+    color: var(--text-muted-custom);
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.mini-calendar td {
+    padding: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mini-calendar td:hover:not(.empty) {
+    background-color: rgba(0, 71, 67, 0.1);
+    color: var(--brand-dark);
+}
+
+.mini-calendar td.has-event {
+    position: relative;
+    font-weight: 700;
+    color: var(--brand-dark);
+}
+
+.mini-calendar td.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--brand-dark);
+}
+
+.mini-calendar td.active-day {
+    background-color: var(--brand-dark) !important;
+    color: var(--brand-accent) !important;
+    border-radius: var(--radius-sm);
+}
+
+.event-list-mini {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 0.8rem;
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.event-item {
+    background-color: #f1f7f5;
+    border-left: 3px solid var(--brand-dark);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+}
+
+/* Footer Styling */
+.footer-skillsync {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    border-top: 3px solid var(--brand-accent);
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.6rem;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    color: var(--brand-accent);
+    transform: translateX(4px);
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--brand-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background-color: var(--brand-accent);
+    color: var(--brand-dark);
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: 700;
+    color: var(--brand-dark);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted-custom);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.1rem;
+    }
+    .hero-slider-section {
+        height: auto;
+        min-height: 480px;
+    }
+    .split-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* SkillSync Custom Pagination System (#004743, #ffffff, #ACFF78) */
+.pagination {
+    gap: 6px;
+}
+
+.pagination .page-link {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    color: var(--brand-dark) !important;
+    background-color: var(--brand-light) !important;
+    border: 1.5px solid var(--brand-dark) !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.2s ease-in-out !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+.pagination .page-link:hover {
+    color: var(--brand-accent) !important;
+    background-color: var(--brand-dark) !important;
+    border-color: var(--brand-dark) !important;
+}
+
+.pagination .page-item.active .page-link {
+    color: var(--brand-accent) !important;
+    background-color: var(--brand-dark) !important;
+    border-color: var(--brand-dark) !important;
+    box-shadow: 0 4px 10px rgba(0, 71, 67, 0.25) !important;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #a0aec0 !important;
+    background-color: #f1f5f9 !important;
+    border-color: #cbd5e1 !important;
+    opacity: 0.55 !important;
+    cursor: not-allowed !important;
+}
